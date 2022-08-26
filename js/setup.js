@@ -37,3 +37,10 @@ const maxParticles = 300;
 const ripplesArray = [];
 const carsArray = [];
 const logsArray = [];
+
+// images 
+const background_lvl2 = new Image();
+background_lvl2.src = 'Frogger/background_lvl2.png';
+
+const grass = new Image();
+grass.src = 'Frogger/grass.png'

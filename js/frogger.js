@@ -11,24 +11,41 @@ class Frogger {
         this.frameY = 0;
     }
     update() {
-        console.log('update');
+
         if (keys[38]) { //up
             if (this.moving === false) {
                 this.y -= grid;
                 this.moving = true;
-
             }
-        }
+        };
+
         if (keys[40]) { //down
-            if (this.moving === false) {
-                if (this.y < canvas.height - this.height * 2 && this.moving === false) {
-                    this.y += grid;
-                    this.moving = true;
-                }
-
+            if (this.moving === false && this.y < canvas.height - this.height * 2) {
+                this.y += grid;
+                this.moving = true;
             }
+        };
 
-        }
+        if (keys[37]) { //left
+            if (this.moving === false && this.x > this.width) {
+                this.x -= grid;
+                this.moving = true;
+            }
+        };
+
+        if (keys[39]) { //right
+            if (this.moving === false && this.x < canvas.width - this.width * 2) {
+                this.x += grid;
+                this.moving = true;
+            }
+        };
+        if (this.y < 0) scored();
+
+
+
+
+
+
     }
 
     draw() {
@@ -37,7 +54,7 @@ class Frogger {
 
     }
     jump() {
-        console.log('jump');
+
     }
 }
 
