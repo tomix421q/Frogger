@@ -13,7 +13,8 @@ function animate() {
 
     handleObstacles();
     handleScoreBoard();
-    ctx4.drawImage(grass, 0, 0, canvas.width, canvas.height)
+    ctx4.drawImage(grass, 0, 0);
+    frame++;
     requestAnimationFrame(animate);
 }
 animate();
@@ -30,6 +31,7 @@ window.addEventListener('keydown', function(e) {
 window.addEventListener('keyup', function(e) {
     delete keys[e.keyCode];
     frogger.moving = false;
+    frogger.frameX = 0;
 });
 
 

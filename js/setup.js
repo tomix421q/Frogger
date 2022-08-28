@@ -31,6 +31,7 @@ let score = 0;
 let collisionCount = 0;
 let frame = 0;
 let gameSpeed = 1;
+let safe = false;
 
 const particleArray = [];
 const maxParticles = 300;
@@ -43,7 +44,20 @@ const background_lvl2 = new Image();
 background_lvl2.src = 'Frogger/background_lvl2.png';
 
 const grass = new Image();
-grass.src = 'Frogger/grass.png'
+grass.src = 'Frogger/grass.png';
 
 const collisions = new Image();
-collisions.src = 'Frogger/collisions.png'
+collisions.src = 'Frogger/collisions.png';
+
+const turtle = new Image();
+turtle.src = 'Frogger/turtles.png';
+
+const log = new Image();
+log.src = 'Frogger/log.png';
+
+const car = new Image();
+car.src = 'Frogger/cars.png';
+let numberOfCars = 3;
+
+const froggerSprite = new Image();
+froggerSprite.src = 'Frogger/frog_spritesheet.png';
