@@ -8,8 +8,8 @@ class Obstacle {
         this.type = type;
     }
     draw() {
-        ctx1.fillStyle = 'blue'
-        ctx1.fillRect(this.x, this.y, this.width, this.height);
+        ctx3.fillStyle = 'blue'
+        ctx3.fillRect(this.x, this.y, this.width, this.height);
     }
     update() {
 
@@ -68,4 +68,12 @@ function handleObstacles() {
         logsArray[i].draw();
 
     };
+    // collision with car
+    for (let i = 0; i < carsArray.length; i++) {
+        if (collision(frogger, carsArray[i])) {
+            ctx4.drawImage(collisions, 0, 100, 100, 100, frogger.x, frogger.y, 50, 50);
+            resetGame();
+        }
+    }
+
 };
